@@ -1,10 +1,20 @@
 {
   "name": "@weird_phlex/js_coverage",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Convert coverage data from Istanbul's to SimpleCov's format",
-  "main": "index.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "node esbuild.config.cjs",
+    "build:esm": "node esbuild.config.esm.cjs",
+    "test": "jasmine"
   },
   "repository": {
     "type": "git",
@@ -21,5 +31,13 @@
   "bugs": {
     "url": "https://github.com/weird-phlex/js_coverage/issues"
   },
-  "homepage": "https://github.com/weird-phlex/js_coverage#readme"
+  "homepage": "https://github.com/weird-phlex/js_coverage#readme",
+  "dependencies": {
+    "istanbul-lib-coverage": "^3.2.2"
+  },
+  "type": "module",
+  "devDependencies": {
+    "esbuild": "^0.24.2",
+    "jasmine": "^5.5.0"
+  }
 }
