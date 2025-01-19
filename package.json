@@ -1,0 +1,25 @@
+{
+  "name": "@weird_phlex/js_coverage",
+  "version": "1.0.0",
+  "description": "Convert coverage data from Istanbul's to SimpleCov's format",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weird-phlex/js_coverage.git"
+  },
+  "keywords": [
+    "coverage",
+    "Istanbul",
+    "SimpleCov",
+    "Ruby"
+  ],
+  "author": "Klaus Weidinger",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/weird-phlex/js_coverage/issues"
+  },
+  "homepage": "https://github.com/weird-phlex/js_coverage#readme"
+}
